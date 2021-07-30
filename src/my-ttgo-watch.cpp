@@ -27,6 +27,8 @@
 
 #include "gui/gui.h"
 
+#include "gui/mainbar/setup_tile/watchface/config/watchface_expr.h"
+
 #include "hardware/hardware.h"
 #include "hardware/powermgm.h"
 
@@ -43,6 +45,9 @@
 #include "app/FindPhone/FindPhone.h"
 #include "app/gps_status/gps_status.h"
 #include "app/osmmap/osmmap_app.h"
+#include "app/wifimon/wifimon_app.h"
+#include "app/calc/calc_app.h"
+#include "app/kodi_remote/kodi_remote_app.h"
 
 void setup() {
     /**
@@ -79,6 +84,10 @@ void setup() {
     fxrates_app_setup();
     powermeter_app_setup();
 	FindPhone_setup();
+    wifimon_app_setup();
+    calc_app_setup();
+    kodi_remote_app_setup();
+    watchface_expr_setup();
     /**
      * post hardware setup
      * 
